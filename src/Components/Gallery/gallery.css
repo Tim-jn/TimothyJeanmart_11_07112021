@@ -1,3 +1,9 @@
+/*
+
+mobile
+
+*/
+
 .gallery {
   display: flex;
   flex-direction: row;
@@ -38,4 +44,30 @@
   top: 75%;
   left: 16px;
   right: 16px;
+}
+
+/* 
+
+Desktop 
+
+*/
+
+@media (min-width: 992px) {
+  .galleryItem {
+    width: 340px;
+    height: 340px;
+  }
+
+  .gallery {
+    margin: 60px auto;
+    gap: 60px;
+    background: #f6f6f6;
+    padding: 56px 0 56px 0;
+    border-radius: 10px;
+    max-width: 1240px;
+  }
+
+  .galleryItemText {
+    top: 82%;
+  }
 }

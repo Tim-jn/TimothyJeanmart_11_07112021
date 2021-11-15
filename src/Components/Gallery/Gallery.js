@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './gallery.css'
 
-class Gallery extends Component {
+export default class Gallery extends Component {
   render() {
     return (
       <div className="gallery">
@@ -26,4 +26,3 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery

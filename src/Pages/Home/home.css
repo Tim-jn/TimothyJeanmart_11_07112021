@@ -1,4 +1,10 @@
-/* Banner */
+/*
+
+mobile
+
+*/
+
+/* ===== Banner ===== */
 
 .homeBanner {
   min-width: 280px;
@@ -24,4 +30,24 @@
   top: 22%;
   left: 16px;
   width: 78%;
+}
+
+/*
+
+desktop
+
+*/
+
+@media (min-width: 992px) {
+  .homeBanner {
+    width: 1240px;
+    height: 223px;
+    margin: auto;
+  }
+
+  .bannerText {
+    font-size: 48px;
+    top: 37%;
+    left: 20%;
+  }
 }

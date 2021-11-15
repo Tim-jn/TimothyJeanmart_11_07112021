@@ -1,6 +1,6 @@
 import Banner from '../../Components/Banner/Banner'
 import Header from '../../Components/Header/Header'
-import Gallery from '../../Components/Gallery Home/Gallery'
+import Gallery from '../../Components/Gallery/Gallery'
 import Footer from '../../Components/Footer/Footer'
 import data from '../../Data/Data'
 import bannerUrl from './banner.jpg'

@@ -1,4 +1,4 @@
-import logo from './logo-small.png'
+import logo from './logo.svg'
 import './header.css'
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
@@ -17,10 +17,10 @@ class Header extends Component {
         <nav className="nav">
           <ul>
             <Link className="navLink" to="/">
-              <li>ACCUEIL</li>
+              <li>Accueil</li>
             </Link>
             <Link className="navLink" to="/about">
-              <li>A PROPOS</li>
+              <li>A propos</li>
             </Link>
           </ul>
         </nav>

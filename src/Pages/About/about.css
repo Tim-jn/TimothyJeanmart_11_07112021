@@ -1,10 +1,16 @@
-/* Banner */
+/* 
+
+Mobile
+
+*/
+
+/* ====== Banner ====== */
 
 .aboutBanner {
   min-width: 280px;
-  max-width: 100%;
+  max-width: 1240px;
+  margin: auto;
   height: 223px;
-  margin: 20px;
   position: relative;
 }
 
@@ -17,7 +23,7 @@
   border-radius: 10px;
 }
 
-/* Dropdown */
+/* ====== Dropdown ====== */
 
 .aboutDropdown {
   margin: auto;
@@ -36,7 +42,7 @@
   align-items: center;
   border-radius: 5px;
   z-index: 2;
-  margin-bottom: 20px;
+  margin-top: 20px;
   cursor: pointer;
 }
 
@@ -69,3 +75,35 @@
   margin-bottom: 20px;
 }
 
+/*  
+
+Desktop 
+
+*/
+
+@media (min-width: 992px) {
+  /* ====== Dropdown ====== */
+
+  .aboutDropdownVisible {
+    padding: 0px 16px 0px 8px;
+    height: 47px;
+    margin-top: 31px;
+    margin-bottom: 0px;
+  }
+
+  .aboutDropdownVisible h3 {
+    font-size: 24px;
+  }
+
+  .aboutDropdownVisible img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .aboutToggleOpen {
+    margin-top: -10px;
+    font-size: 24px;
+    line-height: 35px;
+    padding: 36px 18px 19px 18px;
+  }
+}
