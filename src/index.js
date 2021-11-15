@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
 import Error from './Pages/Error/Error'
 import './index.css'
+import Accomodation from './Pages/Accomodation/Accomodation'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/accomodation" element={<Accomodation />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

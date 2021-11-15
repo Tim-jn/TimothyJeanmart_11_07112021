@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Header from '../../Components/Header/Header'
 import Dropdown from '../../Components/Dropdown/Dropdown'
+import Footer from '../../Components/Footer/Footer'
 import './about.css'
 import Banner from '../../Components/Banner/Banner'
 import bannerUrl from './aboutBackground.jpg'
@@ -58,6 +59,9 @@ export default class About extends Component {
             className={this.state.className}
           />
         </section>
+        <footer>
+          <Footer />
+        </footer>
       </>
     )
   }
