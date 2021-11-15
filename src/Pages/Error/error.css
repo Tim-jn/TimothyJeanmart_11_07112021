@@ -1,0 +1,22 @@
+.errorContent {
+  text-align: center;
+}
+
+.errorNumber {
+  font-size: 96px;
+  font-weight: bold;
+  margin-top: 200px;
+}
+
+.errorText {
+  font-size: 18px;
+  margin: 1px 20px 130px 20px;
+}
+
+.backButton {
+  font-size: 14px;
+}
+
+.backButton:visited {
+  color: #ff6060;
+}

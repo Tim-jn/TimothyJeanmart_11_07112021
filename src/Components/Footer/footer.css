@@ -1,0 +1,16 @@
+.footerBackground {
+  background: #000;
+  width: 100%;
+  height: 209px;
+}
+
+.footerContent {
+  padding-top: 62px;
+  text-align: center;
+}
+
+.footerCopyright {
+  color: #fff;
+  font-size: 12px;
+  margin-top: 3%;
+}
