@@ -2,7 +2,7 @@
 
 /* 
 
-mobile display 
+mobile 
 
 */
 
@@ -51,7 +51,8 @@ Desktop
 @media (min-width: 992px) {
   .header {
     margin: 40px auto;
-    max-width: 1240px;
+    padding: 0 20px;
+    max-width: 1280px;
   }
 
   .logo {

@@ -40,9 +40,10 @@ desktop
 
 @media (min-width: 992px) {
   .homeBanner {
-    width: 1240px;
+    width: 1280px;
     height: 223px;
     margin: auto;
+    padding: 0 20px;
   }
 
   .bannerText {

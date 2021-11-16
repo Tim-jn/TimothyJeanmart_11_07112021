@@ -2,7 +2,7 @@ import { Component } from 'react'
 import openButton from './openButton.svg'
 import closedButton from './dropdownbtn.svg'
 
-class Dropdown extends Component {
+export default class Dropdown extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -53,5 +53,3 @@ class Dropdown extends Component {
     )
   }
 }
-
-export default Dropdown

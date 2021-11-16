@@ -2,7 +2,7 @@ import { Component } from 'react'
 import logo from './logo-small.svg'
 import './footer.css'
 
-class Footer extends Component {
+export default class Footer extends Component {
   render() {
     return (
       <div className="footerBackground">
@@ -18,5 +18,3 @@ class Footer extends Component {
     )
   }
 }
-
-export default Footer
