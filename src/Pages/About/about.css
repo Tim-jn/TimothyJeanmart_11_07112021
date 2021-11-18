@@ -64,12 +64,11 @@ Mobile
 }
 
 .aboutToggleOpen {
-  margin-top: -25px;
+  margin-top: -10px;
   height: 100%;
   background: #f7f7f7;
   font-size: 12px;
   line-height: 17px;
-  font-weight: 400;
   padding: 23px 10px 50px 10px;
   border-radius: 5px;
   opacity: 1;

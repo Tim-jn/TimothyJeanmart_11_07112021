@@ -28,9 +28,9 @@ export default class Home extends Component {
             className={this.state.className}
           />
         </header>
-        <section>
+        <main>
           <Gallery galleryData={data} />
-        </section>
+        </main>
         <footer>
           <Footer />
         </footer>

@@ -47,7 +47,7 @@ export default class Dropdown extends Component {
               : `${this.state.className}ToggleClose`
           }
         >
-          <p>{this.state.text.content}</p>
+          <div>{this.state.text.content}</div>
         </div>
       </div>
     )

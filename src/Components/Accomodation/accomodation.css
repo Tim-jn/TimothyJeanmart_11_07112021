@@ -1,0 +1,254 @@
+/* 
+
+Mobile
+
+*/
+
+/* ===== Pictures ===== */
+
+.accomodationRooms {
+  margin: 0 20px;
+  height: 255px;
+}
+
+.accomodationRooms img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin: auto;
+  object-fit: cover;
+}
+
+/* ===== Title ===== */
+
+.accomodationTitle {
+  margin: 15px 20px;
+}
+
+.accomodationTitle h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.accomodationTitle p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ===== Tags ===== */
+
+.accomodationTags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.accomodationTags li {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  background: #ff6060;
+  color: #fff;
+  height: 18px;
+  max-width: 118px;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  align-items: center;
+}
+
+/* ===== host profile ===== */
+
+.hostInformations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0px 0 20px;
+}
+
+.hostProfile {
+  width: 100px;
+  display: flex;
+}
+
+.hostProfile img {
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+}
+
+.hostProfile h4 {
+  font-size: 12px;
+  text-align: end;
+  margin-right: 11px;
+}
+
+/* ====== Dropdown ====== */
+
+.accomodationDropdown {
+  margin: auto;
+  width: 89%;
+  max-width: 500px;
+  position: relative;
+}
+
+.accomodationDropdownVisible {
+  height: 30px;
+  position: relative;
+  background: #ff6060;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  z-index: 2;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.accomodationDropdownVisible h3 {
+  margin: 5px 10px;
+  font-size: 13px;
+}
+
+.accomodationDropdownVisible img {
+  width: 16px;
+  height: 10px;
+  margin: 11px 7px;
+}
+
+.accomodationToggleClose {
+  opacity: 0;
+  max-height: 0;
+}
+
+.accomodationToggleOpen {
+  margin-top: -10px;
+  height: 100%;
+  background: #f7f7f7;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 23px 10px 50px 10px;
+  border-radius: 5px;
+  opacity: 1;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+/*
+
+desktop 
+
+*/
+
+@media (min-width: 992px) {
+  .accomodationContent {
+    margin: 0 20px;
+  }
+  /* ===== Pictures ===== */
+
+  .accomodationRooms {
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+    height: 415px;
+  }
+
+  .accomodationRooms img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  /* ===== Title ===== */
+
+  .accomodationTitle {
+    margin: 30px auto 24px auto;
+    position: relative;
+    max-width: 1240px;
+  }
+
+  .accomodationTitle h3 {
+    font-size: 36px;
+  }
+
+  .accomodationTitle p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  /* ===== Tags ===== */
+
+  .accomodationTags li {
+    height: 25px;
+    max-width: 145px;
+    font-size: 14px;
+  }
+
+  /* ===== host profile ===== */
+
+  .hostInformations {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    margin: 0;
+  }
+
+  .hostProfile {
+    width: 200px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .hostProfile img {
+    height: 64px;
+    width: 64px;
+  }
+
+  .hostProfile h4 {
+    font-size: 18px;
+    max-width: 90px;
+    margin: auto 11px auto 0;
+  }
+
+  /* ====== Dropdown ====== */
+
+  .accomodationDropdowns {
+    display: flex;
+    max-width: 1240px;
+    margin: auto;
+    gap: 76px;
+  }
+
+  .accomodationDropdown {
+    max-width: 582px;
+    margin: 0;
+  }
+
+  .accomodationDropdownVisible {
+    height: 52px;
+    margin-top: 24px;
+  }
+
+  .accomodationDropdownVisible h3 {
+    margin: 13px 20px;
+    font-size: 18px;
+  }
+
+  .accomodationDropdownVisible img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .accomodationToggleOpen {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 40px 20px;
+  }
+}
