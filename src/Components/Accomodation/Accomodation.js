@@ -7,9 +7,9 @@ export default class Accomodation extends Component {
     super(props)
     this.state = {
       className: 'accomodation',
-      firstItem: {
+      /*firstItem: {
         title: 'Description',
-        content: this.props.datas.map((item) => item.description),
+        content: this.props.accomodation.description,
       },
       secondItem: {
         title: 'Équipements',
@@ -18,37 +18,39 @@ export default class Accomodation extends Component {
             return <li>{equipments}</li>
           })
         ),
-      },
+      },*/
     }
   }
 
   render() {
     return (
       <>
-        {this.props.datas.map((item, index) => {
-          return (
-            <section className="accomodationContent">
-              <div className="accomodationRooms">
-                <img src={item.pictures[0]} alt="Accomodation rooms" />
-              </div>
-              <div className="accomodationTitle">
-                <h3>{item.title}</h3>
-                <p>{item.location}</p>
-                <ul className="accomodationTags">
-                  {item.tags.map((tags) => {
-                    return <li>{tags}</li>
-                  })}
-                </ul>
-                <div className="hostInformations">
-                  <div className="ratingStars" />
-                  <div className="hostProfile">
-                    <h4>{item.host.name}</h4>
-                    <img src={item.host.picture} alt="Host" />
-                  </div>
+        {this.props.accomodation && (
+          <section className="accomodationContent">
+            <div className="accomodationRooms">
+              <img
+                src={this.props.accomodation.pictures[0]}
+                alt="Accomodation rooms"
+              />
+            </div>
+            <div className="accomodationTitle">
+              <h3>{this.props.accomodation.title}</h3>
+              <p>{this.props.accomodation.location}</p>
+              <ul className="accomodationTags">
+                {this.props.accomodation.tags.map((tags) => {
+                  return <li>{tags}</li>
+                })}
+              </ul>
+              <div className="hostInformations">
+                <div className="ratingStars" />
+                <div className="hostProfile">
+                  <h4>{this.props.accomodation.host.name}</h4>
+                  <img src={this.props.accomodation.host.picture} alt="Host" />
                 </div>
               </div>
-              <div className="accomodationDropdowns">
-                <Dropdown
+            </div>
+            <div className="accomodationDropdowns">
+              {/* <Dropdown
                   text={this.state.firstItem}
                   className={this.state.className}
                   content={this.state.content}
@@ -57,11 +59,11 @@ export default class Accomodation extends Component {
                   text={this.state.secondItem}
                   className={this.state.className}
                   content={this.state.content}
-                />
-              </div>
-            </section>
-          )
-        })}
+                /> */}
+            </div>
+          </section>
+        )}
+        )
       </>
     )
   }

@@ -9,7 +9,7 @@ export default class Gallery extends Component {
         {this.props.galleryData.map((item) => {
           return (
             <div className="galleryItem" key={item.id}>
-              <Link to={`/accomodation`}>
+              <Link to={`/accomodation?id=${item.id}`}>
                 <img
                   className="galleryItemImage"
                   src={item.cover}
