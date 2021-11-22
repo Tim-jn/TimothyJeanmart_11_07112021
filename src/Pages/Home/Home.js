@@ -14,6 +14,7 @@ export default class Home extends Component {
       bannerUrl: bannerUrl,
       text: 'Chez vous, partout et ailleurs',
       className: 'home',
+      data: data,
     }
   }
 
@@ -29,7 +30,7 @@ export default class Home extends Component {
           />
         </header>
         <main>
-          <Gallery galleryData={data} />
+          <Gallery data={this.state.data} />
         </main>
         <footer>
           <Footer />

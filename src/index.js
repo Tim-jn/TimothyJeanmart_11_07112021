@@ -20,7 +20,7 @@ ReactDOM.render(
         <Route exact path="/accomodation">
           <Accomodations />
         </Route>
-        <Route exact path="*">
+        <Route path="*">
           <Error />
         </Route>
       </Switch>

@@ -16,7 +16,7 @@ class Accomodations extends Component {
   }
 
   getAccomodation = (id) => {
-    data.map((item) => {
+    return data.find((item) => {
       if (id.match(item.id)) {
         return {
           id: item.id,
@@ -31,28 +31,9 @@ class Accomodations extends Component {
           equipment: item.equipments,
         }
       } else {
-        return {
-          id: '',
-          title: '',
-          cover: '',
-          pictures: [],
-          description: '',
-          host: { name: '', picture: '' },
-          rating: '',
-          location: '',
-          equipments: [],
-          tags: [],
-        }
+        return console.log('undefined')
       }
     })
-    /*return {
-      description: 'xyz',
-      title: 'xyz',
-      pictures: [],
-      location: '',
-      host: { name: 'xyz', picture: 'xyz' },
-      tags: [],
-    }*/
   }
 
   render() {
@@ -62,6 +43,9 @@ class Accomodations extends Component {
           <Header />
         </header>
         <main>
+          <Carousel
+            accomodation={this.getAccomodation(this.state.accomodationId)}
+          />
           <Accomodation
             accomodation={this.getAccomodation(this.state.accomodationId)}
           />
@@ -75,4 +59,3 @@ class Accomodations extends Component {
 }
 
 export default withRouter(Accomodations)
-//<Carousel datas={data} />

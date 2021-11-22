@@ -1,0 +1,47 @@
+/* 
+
+mobile
+
+*/
+
+.stars-outer {
+  position: relative;
+}
+
+.stars-outer img {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.stars-inner img {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+}
+
+/*
+
+desktop 
+
+*/
+
+@media (min-width: 992px) {
+  .stars-outer img {
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+  }
+
+  .stars-inner img {
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+  }
+}

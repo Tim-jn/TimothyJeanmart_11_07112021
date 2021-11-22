@@ -7,21 +7,41 @@ export default class Carousel extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      current: 0,
+      currentImageIndex: 0,
     }
   }
 
   prevSlide = () => {
-    this.setState({ current: -1 })
+    const lastIndex = this.props.accomodation.pictures.length - 1
+    const { currentImageIndex } = this.state
+    const shouldResetIndex = currentImageIndex === 0
+    const index = shouldResetIndex ? lastIndex : currentImageIndex - 1
+
+    this.setState({
+      currentImageIndex: index,
+    })
   }
 
   nextSlide = () => {
-    this.setState({ current: +1 })
+    const lastIndex = this.props.accomodation.pictures.length - 1
+    const { currentImageIndex } = this.state
+    const shouldResetIndex = currentImageIndex === lastIndex
+    const index = shouldResetIndex ? 0 : currentImageIndex + 1
+
+    this.setState({
+      currentImageIndex: index,
+    })
   }
 
   render() {
     return (
       <section className="carousel">
+        <div className="accomodationRooms">
+          <img
+            src={this.props.accomodation.pictures[this.state.currentImageIndex]}
+            alt={this.props.accomodation.title}
+          />
+        </div>
         <img
           className="previousBtn"
           src={previousBtn}
@@ -34,9 +54,6 @@ export default class Carousel extends Component {
           alt="Next button"
           onClick={this.nextSlide}
         />
-        {this.props.datas.map((slide, index) => {
-          return <img src={slide.pictures} alt={slide.title} />
-        })}
       </section>
     )
   }

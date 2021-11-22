@@ -1,0 +1,58 @@
+/*
+
+mobile
+
+*/
+
+.carousel {
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.previousBtn,
+.nextBtn {
+  position: absolute;
+  z-index: 3;
+  top: 45%;
+  cursor: pointer;
+}
+
+.previousBtn {
+  left: 7%;
+  width: 12px;
+  height: 20px;
+}
+
+.nextBtn {
+  right: 7%;
+  width: 12px;
+  height: 20px;
+}
+
+/*
+
+desktop
+
+*/
+
+@media (min-width: 992px) {
+  .previousBtn,
+  .nextBtn {
+    top: 40%;
+    cursor: pointer;
+  }
+
+  .previousBtn {
+    left: 3%;
+    width: inherit;
+    height: inherit;
+  }
+
+  .nextBtn {
+    right: 3%;
+    width: inherit;
+    height: inherit;
+  }
+}
