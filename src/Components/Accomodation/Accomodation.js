@@ -14,8 +14,8 @@ export default class Accomodation extends Component {
       },
       secondItem: {
         title: 'Équipements',
-        content: this.props.accomodation.equipments.map((equipments) => {
-          return <li>{equipments}</li>
+        content: this.props.accomodation.equipments.map((equipments, index) => {
+          return <li key={index}>{equipments}</li>
         }),
       },
     }
@@ -30,8 +30,8 @@ export default class Accomodation extends Component {
               <h3>{this.props.accomodation.title}</h3>
               <p>{this.props.accomodation.location}</p>
               <ul className="accomodationTags">
-                {this.props.accomodation.tags.map((tags) => {
-                  return <li>{tags}</li>
+                {this.props.accomodation.tags.map((tags, index) => {
+                  return <li key={'tag ' + index}>{tags}</li>
                 })}
               </ul>
               <div className="hostInformations">

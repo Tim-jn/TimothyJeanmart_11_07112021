@@ -16,7 +16,7 @@ export default class Rating extends Component {
     let starsArray = []
 
     for (let i = 0; i < Number(rating); i++) {
-      starsArray.push(<img src={fullStar} alt="rating star" />)
+      starsArray.push(<img src={fullStar} alt="rating star" key={i} />)
     }
 
     return (

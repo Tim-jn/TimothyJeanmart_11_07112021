@@ -194,7 +194,7 @@ desktop
   .hostProfile {
     width: 200px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 24px;
   }
 
