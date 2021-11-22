@@ -33,6 +33,27 @@ export default class Carousel extends Component {
     })
   }
 
+  displayButtons = () => {
+    if (this.props.accomodation.pictures.length > 1) {
+      return (
+        <>
+          <img
+            className="previousBtn"
+            src={previousBtn}
+            alt="Previous button"
+            onClick={this.prevSlide}
+          />
+          <img
+            className="nextBtn"
+            src={nextBtn}
+            alt="Next button"
+            onClick={this.nextSlide}
+          />
+        </>
+      )
+    }
+  }
+
   render() {
     return (
       <section className="carousel">
@@ -42,18 +63,7 @@ export default class Carousel extends Component {
             alt={this.props.accomodation.title}
           />
         </div>
-        <img
-          className="previousBtn"
-          src={previousBtn}
-          alt="Previous button"
-          onClick={this.prevSlide}
-        />
-        <img
-          className="nextBtn"
-          src={nextBtn}
-          alt="Next button"
-          onClick={this.nextSlide}
-        />
+        {this.displayButtons()}
       </section>
     )
   }

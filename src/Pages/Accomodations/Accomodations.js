@@ -31,7 +31,7 @@ class Accomodations extends Component {
           equipment: item.equipments,
         }
       } else {
-        return console.log('undefined')
+        return console.log(undefined)
       }
     })
   }
