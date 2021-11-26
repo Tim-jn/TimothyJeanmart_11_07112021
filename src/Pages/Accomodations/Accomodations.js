@@ -17,22 +17,13 @@ class Accomodations extends Component {
 
   getAccomodation = (id) => {
     return data.find((item) => {
-      if (id.match(item.id)) {
-        return {
-          id: item.id,
-          title: item.title,
-          cover: item.cover,
-          pictures: item.pictures,
-          location: item.location,
-          host: { name: item.name, picture: item.picture },
-          rating: item.rating,
-          tags: item.tags,
-          description: item.description,
-          equipment: item.equipments,
-        }
-      } else {
-        return console.log(undefined)
+      if (id === item.id) {
+        return id === item.id
+      } else if (id !== item.id) {
+        this.props.history.push('/error404')
+        return (item.id = [])
       }
+      return console.log('')
     })
   }
 
