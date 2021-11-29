@@ -15,37 +15,30 @@ class Accomodations extends Component {
     }
   }
 
-  getAccomodation = (id) => {
-    return data.find((item) => {
-      if (id === item.id) {
-        return id === item.id
-      } else if (id !== item.id) {
-        this.props.history.push('/error404')
-        return (item.id = [])
-      }
-      return console.log('')
-    })
+  getAccomodations() {
+    return data.find((item) => this.state.accomodationId === item.id)
   }
 
   render() {
-    return (
-      <>
-        <header>
-          <Header />
-        </header>
-        <main>
-          <Carousel
-            accomodation={this.getAccomodation(this.state.accomodationId)}
-          />
-          <Accomodation
-            accomodation={this.getAccomodation(this.state.accomodationId)}
-          />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </>
-    )
+    if (!data.some((item) => item.id === this.state.accomodationId)) {
+      this.props.history.push('/error404')
+      return null
+    } else {
+      return (
+        <>
+          <header>
+            <Header />
+          </header>
+          <main>
+            <Carousel accomodation={this.getAccomodations()} />
+            <Accomodation accomodation={this.getAccomodations()} />
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </>
+      )
+    }
   }
 }
 
