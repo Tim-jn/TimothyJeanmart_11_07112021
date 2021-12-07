@@ -5,26 +5,25 @@ import './accomodation.css'
 
 export default class Accomodation extends Component {
   constructor(props) {
-    console.log(props.accomodation?.description)
     super(props)
     this.state = {
       className: 'accomodation',
-      firstItem: {
-        title: 'Description',
-        content: this.props.accomodation?.description,
-      },
-      secondItem: {
-        title: 'Équipements',
-        content: this.props.accomodation?.equipments.map(
-          (equipments, index) => {
-            return <li key={index}>{equipments}</li>
-          }
-        ),
-      },
     }
   }
 
   render() {
+    this.firstItem = {
+      title: 'Description',
+      content: this.props.accomodation?.description,
+    }
+
+    this.secondItem = {
+      title: 'Équipements',
+      content: this.props.accomodation?.equipments.map((equipments, index) => {
+        return <li key={index}>{equipments}</li>
+      }),
+    }
+
     return (
       <>
         {this.props.accomodation && (
@@ -47,14 +46,12 @@ export default class Accomodation extends Component {
             </div>
             <div className="accomodationDropdowns">
               <Dropdown
-                text={this.state.firstItem}
+                text={this.firstItem}
                 className={this.state.className}
-                content={this.state.content}
               />
               <Dropdown
-                text={this.state.secondItem}
+                text={this.secondItem}
                 className={this.state.className}
-                content={this.state.content}
               />
             </div>
           </section>
