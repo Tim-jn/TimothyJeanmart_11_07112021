@@ -5,18 +5,21 @@ import './accomodation.css'
 
 export default class Accomodation extends Component {
   constructor(props) {
+    console.log(props.accomodation?.description)
     super(props)
     this.state = {
       className: 'accomodation',
       firstItem: {
         title: 'Description',
-        content: this.props.accomodation.description,
+        content: this.props.accomodation?.description,
       },
       secondItem: {
         title: 'Équipements',
-        content: this.props.accomodation.equipments.map((equipments, index) => {
-          return <li key={index}>{equipments}</li>
-        }),
+        content: this.props.accomodation?.equipments.map(
+          (equipments, index) => {
+            return <li key={index}>{equipments}</li>
+          }
+        ),
       },
     }
   }

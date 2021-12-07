@@ -9,36 +9,43 @@ import Carousel from '../../Components/Carousel/Carousel'
 class Accomodations extends Component {
   constructor(props) {
     super(props)
-    const searchParams = new URLSearchParams(this.props.location.search)
+
     this.state = {
-      accomodationId: searchParams.get('id'),
+      accomodation: null,
     }
   }
 
-  getAccomodations() {
-    return data.find((item) => this.state.accomodationId === item.id)
+  getAccomodation(id) {
+    const accomodation = data.find((item) => id === item.id)
+    if (!accomodation) {
+      this.props.history.push('/error404')
+      return null
+    }
+    return accomodation
+  }
+
+  componentDidMount() {
+    const searchParams = new URLSearchParams(this.props.location.search)
+    this.setState({
+      accomodation: this.getAccomodation(searchParams.get('id')),
+    })
   }
 
   render() {
-    if (!data.some((item) => item.id === this.state.accomodationId)) {
-      this.props.history.push('/error404')
-      return null
-    } else {
-      return (
-        <>
-          <header>
-            <Header />
-          </header>
-          <main>
-            <Carousel accomodation={this.getAccomodations()} />
-            <Accomodation accomodation={this.getAccomodations()} />
-          </main>
-          <footer>
-            <Footer />
-          </footer>
-        </>
-      )
-    }
+    return (
+      <>
+        <header>
+          <Header />
+        </header>
+        <main>
+          <Carousel accomodation={this.state.accomodation} />
+          <Accomodation accomodation={this.state.accomodation} />
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </>
+    )
   }
 }
 
