@@ -36,8 +36,12 @@ mobile
   color: #ff6060;
 }
 
-.navLink:hover {
+.active {
   text-decoration: underline;
+  cursor: pointer;
+  margin: auto 5px;
+  color: #ff6060;
+  text-transform: uppercase;
 }
 
 /* 
@@ -65,5 +69,11 @@ Desktop
   .navLink {
     margin: auto 0px auto 60px;
     text-transform: inherit;
+  }
+
+  .active {
+    margin: auto 0px auto 60px;
+    text-transform: inherit;
+    text-decoration: underline;
   }
 }

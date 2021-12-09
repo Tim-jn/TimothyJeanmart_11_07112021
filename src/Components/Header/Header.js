@@ -1,13 +1,13 @@
 import logo from './logo.svg'
 import './header.css'
 import { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Link to="/">
+        <Link to="/home">
           <img
             className="logo"
             src={process.env.PUBLIC_URL + logo}
@@ -16,12 +16,12 @@ export default class Header extends Component {
         </Link>
         <nav className="nav">
           <ul>
-            <Link className="navLink" to="/">
+            <NavLink className="navLink" to="/home">
               <li>Accueil</li>
-            </Link>
-            <Link className="navLink" to="/about">
+            </NavLink>
+            <NavLink className="navLink" to="/about">
               <li>A propos</li>
-            </Link>
+            </NavLink>
           </ul>
         </nav>
       </div>

@@ -11,10 +11,10 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/home">
           <Home />
         </Route>
-        <Route path="/about">
+        <Route exact path="/about">
           <About />
         </Route>
         <Route path="/accomodation">
