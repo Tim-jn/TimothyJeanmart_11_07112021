@@ -7,7 +7,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Link to="/home">
+        <Link to="/">
           <img
             className="logo"
             src={process.env.PUBLIC_URL + logo}
@@ -16,10 +16,10 @@ export default class Header extends Component {
         </Link>
         <nav className="nav">
           <ul>
-            <NavLink className="navLink" to="/home">
+            <NavLink className="navLink" to="/" exact>
               <li>Accueil</li>
             </NavLink>
-            <NavLink className="navLink" to="/about">
+            <NavLink className="navLink" to="/about" exact>
               <li>A propos</li>
             </NavLink>
           </ul>
